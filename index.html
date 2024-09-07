@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Dynamic Resume Builder</h1>
+        <div class="main">
+
+            <form id="resumeForm">
+                <h2>Personal Information</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="name">Profile Image:</label>
+                <input type="file" id="image" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <h2>Contact Information</h2>
+                <label for="address">Address:</label>
+                <input type="text" id="address" required>
+
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" required>
+
+                <h2>Leadership & Communication</h2>
+                <label for="communication">Communication:</label>
+                <input type="text" id="communication" required>
+
+                <label for="leadership">Leadership:</label>
+                <input type="text" id="leadership" required>
+
+                <h2>Education</h2>
+                <label for="education">Degree:</label>
+                <input type="text" id="education" required>
+
+                <label for="institution">Institution:</label>
+                <input type="text" id="institution" required>
+
+                <h2>Work Experience</h2>
+                <label for="jobTitle">Job Title:</label>
+                <input type="text" id="jobTitle" required>
+
+                <label for="company">Company:</label>
+                <input type="text" id="company" required>
+
+                <h2>Skills</h2>
+                <label for="skills">Skills (comma separated):</label>
+                <input type="text" id="skills" required>
+
+                <button type="submit">Generate Resume</button>
+            </form>
+
+            <div id="resumeContainer">
+                <h2>Your Resume</h2>
+                <div id="resume"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="app.js" type="module"></script>
+</body>
+
+</html>
