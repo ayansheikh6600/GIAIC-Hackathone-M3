@@ -58,6 +58,22 @@ h2 {
     margin-bottom: 20px;
 }
 
+.btn-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.edit-btn{
+    width: 200px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    outline: none;
+    margin: auto;
+    background-color: green;
+    color: white;
+
+}
+
 
 
 h3 {

@@ -61,12 +61,19 @@
             <div id="resumeContainer">
                 <h2>Your Resume</h2>
                 <div id="resume"></div>
+                <div id="shareDownload">
+                    <button id="download-btn">Download as PDF</button>
+                    <p id="resume-url">Shareable URL: <a id="resume-link" href="#">Not Available</a></p>
+                </div>
             </div>
         </div>
 
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <script src="app.js" type="module"></script>
+    <script src="firebase.js" type="module"></script>
+
 </body>
 
 </html>
