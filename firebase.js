@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
 import { getFirestore, collection,setDoc, addDoc,getDoc, getDocs, deleteDoc, doc, updateDoc } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js";
-
+import { getStorage ,ref, uploadBytesResumable, getDownloadURL   } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-storage.js";
   // TODO: Add SDKs for Firebase products that you want to usf
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -17,15 +17,16 @@ import { getFirestore, collection,setDoc, addDoc,getDoc, getDocs, deleteDoc, doc
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app)
+  const storage = getStorage(app);
 
-  console.log(app);
+  // console.log(app);
   
 
 
   const Upload = async(formData, email)=>{
 
             const res = await setDoc(doc(db, "resume", email,),formData)
-            console.log(formData)
+            // console.log(formData)
             
 
   }
@@ -38,7 +39,7 @@ import { getFirestore, collection,setDoc, addDoc,getDoc, getDocs, deleteDoc, doc
 const docSnap = await getDoc(docRef);
 
 if (docSnap.exists()) {
-  console.log("Document data:", docSnap.data());
+  // console.log("Document data:", docSnap.data());
   return docSnap.data()
 } else {
   // docSnap.data() will be undefined in this case
@@ -55,5 +56,7 @@ if (docSnap.exists()) {
   export default Upload
 
   export{
-    GetData
+    GetData,
+    getStorage ,ref, uploadBytesResumable, getDownloadURL,
+    storage,
   }

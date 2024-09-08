@@ -6,6 +6,20 @@ body {
     padding: 0;
 }
 
+.imggDiv {
+    position: absolute;
+    background-color: #a1681c;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    /* height: 200px; */
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    display: none;
+}
+
 .container {
     max-width: 900px;
     margin: auto;
@@ -124,32 +138,38 @@ h2 {
 .edit-btn:hover {
     background-color: #28a745;
 }
-h1{
+
+h1 {
     color: #ebad5d;
 }
+
 h3 {
     font-size: 22px;
     color: #4d90fe;
     margin-bottom: 15px;
 }
 
-#resumeForm{
+#resumeForm {
     background-color: #ffdbacb6;
 
     padding: 10px 20px;
     border-radius: 12px;
-    
+
 }
 
 p {
     margin-bottom: 10px;
 }
 
-.contact-section, .communication-section, .leadership-section {
+.contact-section,
+.communication-section,
+.leadership-section {
     margin-bottom: 20px;
 }
 
-.contact-section p, .communication-section p, .leadership-section p {
+.contact-section p,
+.communication-section p,
+.leadership-section p {
     font-size: 14px;
     color: #666;
 }
@@ -193,7 +213,3 @@ p {
         width: 90px;
     }
 }
-
-
-
-

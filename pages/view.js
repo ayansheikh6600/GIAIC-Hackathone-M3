@@ -1,4 +1,21 @@
 import { GetData } from "../firebase.js";
+
+const resumeLink = document.getElementById('resume-link') ;
+
+
+document.getElementById('download-pdf').addEventListener('click', function () {
+    var element = document.querySelector('#resume');
+    var opt = {
+      margin: 0.5,
+      filename: 'resume.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
+    html2pdf().set(opt).from(element).save();
+  });
+  
+
 const resumeForm = document.getElementById('resumeForm')  ;
     const resumeContainer = document.getElementById('resume') ;
 
@@ -6,7 +23,9 @@ window.onload = async() => {
  const param =new URLSearchParams(window.location.search);
  const page = param.get('username');
 
- console.log(param);
+ resumeLink.innerText = window.location.href
+
+//  console.log(param);
 
  const data = await GetData(page)
 
