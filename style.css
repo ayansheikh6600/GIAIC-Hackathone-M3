@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
+    background-color: #ffdbacb6;
     color: #333;
     margin: 0;
     padding: 0;
@@ -9,37 +9,84 @@ body {
 .container {
     max-width: 900px;
     margin: auto;
+    margin-top: 10px;
     padding: 20px;
     background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    transition: all 0.3s ease;
 }
 
 h1 {
     font-size: 36px;
     color: #2d2d2d;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
 }
 
 h2 {
     font-size: 24px;
-    color: #2d2d2d;
+    color: #333;
     margin-bottom: 15px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 8px;
 }
 
+.formDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
 
-.resume-container {
+.formDiv div {
+    flex-basis: 48%;
     display: flex;
     flex-direction: column;
-    max-width: 900px;
-    margin: auto;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+}
+
+.formDiv label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.formDiv input {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.formDiv input:focus {
+    border-color: #4d90fe;
+    outline: none;
+}
+
+.btnss {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.btnss button {
+    padding: 12px 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffb14c;
+    color: white;
+    font-weight: 700;
+    border: 2px solid #a1681c;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btnss button:hover {
+    background-color: #da943ae0;
 }
 
 .left-column {
@@ -53,33 +100,45 @@ h2 {
 }
 
 .profile-image img {
-    width: 100px;
+    width: 120px;
     border-radius: 50%;
     margin-bottom: 20px;
 }
 
-.btn-div{
+.btn-div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.edit-btn{
+
+.edit-btn {
     width: 200px;
-    padding: 5px 10px;
-    border-radius: 10px;
-    outline: none;
-    margin: auto;
+    padding: 10px 20px;
+    border-radius: 8px;
     background-color: green;
     color: white;
-
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-
-
+.edit-btn:hover {
+    background-color: #28a745;
+}
+h1{
+    color: #ebad5d;
+}
 h3 {
-    font-size: 24px;
+    font-size: 22px;
     color: #4d90fe;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+}
+
+#resumeForm{
+    background-color: #ffdbacb6;
+
+    padding: 10px 20px;
+    border-radius: 12px;
+    
 }
 
 p {
@@ -95,16 +154,6 @@ p {
     color: #666;
 }
 
-.right-column h2 {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #2d2d2d;
-}
-
-.education-section, .experience-section {
-    margin-bottom: 20px;
-}
-
 .references-section {
     margin-top: 20px;
     font-size: 14px;
@@ -112,39 +161,39 @@ p {
 }
 
 /* Responsive Styles */
-@media (min-width: 768px) {
-    .resume-container {
-        flex-direction: row;
-    }
-
-    .left-column {
-        width: 30%;
-    }
-
-    .right-column {
-        width: 70%;
-    }
-}
-
 @media (max-width: 767px) {
-    .resume-container {
-        flex-direction: column;
+    h1 {
+        font-size: 28px;
     }
 
-    .left-column, .right-column {
+    h2 {
+        font-size: 22px;
+    }
+
+    .formDiv div {
+        flex-basis: 100%;
+    }
+
+    .btnss button {
         width: 100%;
-        padding: 10px;
+    }
+
+    .resume-container {
+        display: flex;
+        flex-direction: column;
+        max-width: 900px;
+        margin: auto;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
     }
 
     .profile-image img {
-        width: 80px;
-    }
-
-    h1 {
-        font-size: 30px;
-    }
-
-    h3 {
-        font-size: 20px;
+        width: 90px;
     }
 }
+
+
+
+

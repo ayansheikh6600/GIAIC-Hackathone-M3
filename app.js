@@ -2,6 +2,18 @@ import Upload from "./firebase.js";
 
 
 
+document.getElementById('download-pdf').addEventListener('click', function () {
+  var element = document.querySelector('#resume');
+  var opt = {
+    margin: 0.5,
+    filename: 'resume.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2 },
+    jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+  };
+  html2pdf().set(opt).from(element).save();
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     // Selecting form elements and resume container
     const resumeForm = document.getElementById('resumeForm')  ;
